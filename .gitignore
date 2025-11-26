@@ -38,4 +38,6 @@ __screenshots__/
 # Environnement
 .env
 
+.vscode/
+
 /public/img/

@@ -61,8 +61,6 @@ npm create vue@latest my-app
 cd my-app
 ```
 
-````
-
 Sélectionnez les options **Router, Pinia, Prettier**.
 
 ---
@@ -304,4 +302,3 @@ Tous les composants utilisent **TailwindCSS**, donc toutes les classes peuvent �
 ```vue
 <Button class="bg-pink-500 hover:bg-pink-600">Personnalisé</Button>
 ```
-````
