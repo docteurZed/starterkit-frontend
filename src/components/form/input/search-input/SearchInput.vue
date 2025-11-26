@@ -29,17 +29,10 @@ function handleInput(e) {
             <span class="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
                 <Search class="w-5 h-5 text-muted" />
             </span>
-            <input
-                type="text"
-                :id="id"
-                :name="name"
-                :placeholder="placeholder"
-                :required="required"
-                :value="modelValue"
+            <input type="text" :id="id" :name="name" :placeholder="placeholder" :required="required" :value="modelValue"
                 @input="handleInput"
                 class="bg-zinc-200/50 text-default text-sm rounded-lg block w-full p-2.5 pl-8 dark:bg-zinc-800/50 placeholder-zinc-600 dark:placeholder-zinc-500 border"
-                :class="borderClasses"
-            />
+                :class="borderClasses" />
         </div>
 
         <p v-if="error" class="mt-2 text-sm text-red">

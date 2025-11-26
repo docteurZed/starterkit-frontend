@@ -44,7 +44,7 @@ export default defineConfig({
                     ],
                 },
                 {
-                    text: 'Composants',
+                    text: 'Composants UI',
                     collapsed: true,
                     items: [
                         { text: 'AppLogo', link: '/frontend/components/app-logo' },
@@ -65,14 +65,34 @@ export default defineConfig({
                         { text: 'Toast', link: '/frontend/components/toast' },
                     ],
                 },
+                {
+                    text: 'Composants Form',
+                    collapsed: true,
+                    items: [
+                        { text: 'Checkbox', link: '/frontend/components/checkbox' },
+                        { text: 'FileInput', link: '/frontend/components/file-input' },
+                        { text: 'FormWrapper', link: '/frontend/components/form-wrapper' },
+                        { text: 'ImageDropzone', link: '/frontend/components/image-dropzone' },
+                        { text: 'PasswordInput', link: '/frontend/components/password-input' },
+                        { text: 'Radio', link: '/frontend/components/radio' },
+                        { text: 'SearchInput', link: '/frontend/components/search-input' },
+                        { text: 'Select', link: '/frontend/components/select' },
+                        { text: 'Switch', link: '/frontend/components/switch' },
+                        { text: 'TextInput', link: '/frontend/components/text-input' },
+                        { text: 'Textarea', link: '/frontend/components/textarea' },
+                    ],
+                },
+                {
+                    text: 'Composants Table',
+                    collapsed: true,
+                    items: [{ text: 'DataTable', link: '/frontend/components/data-table' }],
+                },
             ],
 
             '/backend/': [
                 {
                     text: 'Guide backend',
-                    items: [
-                        { text: 'Introduction', link: '/backend/introduction' },
-                    ],
+                    items: [{ text: 'Introduction', link: '/backend/introduction' }],
                 },
             ],
         },

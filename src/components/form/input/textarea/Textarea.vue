@@ -19,19 +19,11 @@ const borderClasses = computed(() =>
             {{ label }}
         </label>
 
-        <textarea
-            :id="id"
-            :name="name"
-            :placeholder="placeholder"
-            :required="required"
-            :rows="rows"
-            :value="modelValue"
-            @input="emit('update:modelValue', $event.target.value)"
-            :class="[
+        <textarea :id="id" :name="name" :placeholder="placeholder" :required="required" :rows="rows" :value="modelValue"
+            @input="emit('update:modelValue', $event.target.value)" :class="[
                 'bg-zinc-200/50 text-default text-sm rounded-lg block w-full p-2.5 pr-10 dark:bg-zinc-800/50 placeholder-zinc-600 dark:placeholder-zinc-500 border',
                 borderClasses,
-            ]"
-        ></textarea>
+            ]"></textarea>
 
         <p v-if="helperText && !error" class="mt-2 text-sm text-muted">
             {{ helperText }}

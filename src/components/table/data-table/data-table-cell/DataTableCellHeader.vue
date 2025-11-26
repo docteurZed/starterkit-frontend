@@ -11,13 +11,10 @@ const toggleSort = inject('toggleSort')
 </script>
 
 <template>
-    <th
-        :class="[
-            'px-4 py-3 text-left font-semibold bg-zinc-100 dark:bg-zinc-700/50',
-            sortable ? 'cursor-pointer' : '',
-        ]"
-        @click="sortable && toggleSort?.(columnKey, true)"
-    >
+    <th :class="[
+        'px-4 py-3 text-left font-semibold bg-zinc-100 dark:bg-zinc-700/50',
+        sortable ? 'cursor-pointer' : '',
+    ]" @click="sortable && toggleSort?.(columnKey, true)">
         <div class="flex gap-4 items-center">
             <slot>
                 {{ label }}

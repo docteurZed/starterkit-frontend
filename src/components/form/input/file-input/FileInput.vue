@@ -23,30 +23,18 @@ function handleFileChange(event) {
 
 <template>
     <div>
-        <label
-            v-if="label"
-            :for="id"
-            class="block mb-2 font-semibold text-zinc-800 dark:text-zinc-200"
-        >
+        <label v-if="label" :for="id" class="block mb-2 font-semibold text-zinc-800 dark:text-zinc-200">
             {{ label }}
         </label>
 
-        <input
-            type="file"
-            :id="id"
-            :name="name"
-            :required="required"
-            :multiple="multiple"
-            @change="handleFileChange"
+        <input type="file" :id="id" :name="name" :required="required" :multiple="multiple" @change="handleFileChange"
             class="block w-full text-sm text-zinc-800 dark:text-zinc-200 bg-zinc-200/50 dark:bg-zinc-800/50 file:py-2.5 file:px-4 file:rounded-l-lg file:border-0 file:bg-zinc-300 dark:file:bg-zinc-700 file:text-zinc-800 dark:file:text-zinc-200 hover:file:bg-zinc-400/80 dark:hover:file:bg-zinc-600/80 border rounded-lg"
-            :class="borderClasses"
-        />
+            :class="borderClasses" />
 
         <p v-if="selectedFiles.length" class="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
             Fichier(s) sélectionné(s):
-            <span v-for="(file, i) in selectedFiles" :key="i"
-                >{{ file.name }}<span v-if="i < selectedFiles.length - 1">, </span></span
-            >
+            <span v-for="(file, i) in selectedFiles" :key="i">{{ file.name }}<span v-if="i < selectedFiles.length - 1">,
+                </span></span>
         </p>
 
         <p v-if="helperText && !error" class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">

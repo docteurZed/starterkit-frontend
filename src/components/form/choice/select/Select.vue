@@ -50,47 +50,31 @@ const filteredOptions = computed(() => {
 
 <template>
     <div class="mb-5 relative" ref="selectRef">
-        <label
-            v-if="label"
-            :for="id"
-            class="block mb-2 font-semibold text-zinc-900 dark:text-white"
-        >
+        <label v-if="label" :for="id" class="block mb-2 font-semibold text-zinc-900 dark:text-white">
             {{ label }}
         </label>
 
         <input v-if="name" type="hidden" :name="name" :value="modelValue" />
 
-        <div
-            @click="toggleDropdown"
+        <div @click="toggleDropdown"
             class="bg-zinc-200/50 dark:bg-zinc-800/50 border rounded-lg px-3 py-2.5 flex justify-between items-center cursor-pointer text-sm text-default border-strong"
-            :class="{ 'border-red': error }"
-        >
+            :class="{ 'border-red': error }">
             <span class="truncate">{{ selectedLabel || placeholder }}</span>
             <ChevronsUpDown class="w-5 h-5 text-muted" />
         </div>
 
         <transition name="fade">
-            <div
-                v-if="isOpen"
-                class="absolute z-50 mt-1 w-full bg-muted border border-default rounded-lg shadow-lg overflow-hidden"
-            >
+            <div v-if="isOpen"
+                class="absolute z-50 mt-1 w-full bg-muted border border-default rounded-lg shadow-lg overflow-hidden">
                 <div v-if="filterable" class="flex items-center px-2 py-2 border-b border-default">
                     <Search class="w-4 h-4 text-muted mr-2" />
-                    <input
-                        v-model="search"
-                        type="text"
-                        placeholder="Rechercher..."
-                        class="w-full bg-transparent focus:outline-none text-sm text-default placeholder-zinc-500"
-                    />
+                    <input v-model="search" type="text" placeholder="Rechercher..."
+                        class="w-full bg-transparent focus:outline-none text-sm text-default placeholder-zinc-500" />
                 </div>
 
                 <ul class="max-h-48 overflow-auto divide-y divide-zinc-300 dark:divide-zinc-700">
-                    <li
-                        v-for="option in filteredOptions"
-                        :key="option.value"
-                        @click="selectOption(option)"
-                        class="px-3 py-2 cursor-pointer hover:bg-zinc-300 dark:hover:bg-zinc-700"
-                    >
+                    <li v-for="option in filteredOptions" :key="option.value" @click="selectOption(option)"
+                        class="px-3 py-2 cursor-pointer hover:bg-zinc-300 dark:hover:bg-zinc-700">
                         {{ option.label }}
                     </li>
                 </ul>

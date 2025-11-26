@@ -67,10 +67,8 @@ const displayedRows = computed(() => {
 <template>
     <div class="flex flex-col sm:flex-row gap-4 sm:gap-0 justify-between items-center p-3">
         <div>
-            <select
-                v-model="rowsPerPage"
-                class="font-semibold bg-muted border border-default rounded-lg px-2 py-1.5 text-sm text-default focus:outline-none focus:ring-2 focus-primary focus:border-primary-500 transition-all cursor-pointer"
-            >
+            <select v-model="rowsPerPage"
+                class="font-semibold bg-muted border border-default rounded-lg px-2 py-1.5 text-sm text-default focus:outline-none focus:ring-2 focus-primary focus:border-primary-500 transition-all cursor-pointer">
                 <option v-for="opt in perPageOptions" :key="opt" :value="opt">{{ opt }}</option>
             </select>
         </div>
@@ -83,12 +81,8 @@ const displayedRows = computed(() => {
 
             <template v-for="item in paginationItems" :key="item">
                 <span v-if="item === '...'">...</span>
-                <Button
-                    v-else
-                    size="sm"
-                    @click="currentPage = item"
-                    :variant="currentPage === item ? 'primary' : 'transparent'"
-                >
+                <Button v-else size="sm" @click="currentPage = item"
+                    :variant="currentPage === item ? 'primary' : 'transparent'">
                     {{ item }}
                 </Button>
             </template>

@@ -2,14 +2,21 @@
 layout: home
 
 hero:
-    name: Stater Kit
-    # text: "Auteur: docteurZed."
-    tagline: "Kit de démarrage Vue.js 3 et laravel 12 de docteurZed"
+    name: Starter Kit
+    tagline: "Kit de démarrage complet Vue.js 3 & Laravel 12 par docteurZed prêt à l'emploi, conçu pour accélérer la création de vos projets frontend et backend."
     actions:
         - theme: brand
-          text: Frontend
-          link: /frontend/introduction
+          text: 'Découvrir le Frontend'
+          link: '/frontend/introduction'
         - theme: alt
-          text: Backend
-          link: /backend/introduction
+          text: 'Explorer le Backend'
+          link: '/backend/introduction'
+
+features:
+    - title: 'Frontend moderne'
+      details: "Composants Vue.js 3 prêts à l'emploi, TailwindCSS, formulaires, modals et datatables."
+    - title: 'Backend robuste'
+      details: 'API Laravel 12 configurée, authentification, gestion des erreurs et intégration facile avec le frontend.'
+    - title: 'Productivité'
+      details: 'Démarrage rapide, documentation intégrée, et composants modulaires pour gagner du temps.'
 ---
