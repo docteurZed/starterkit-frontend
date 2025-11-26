@@ -26,11 +26,18 @@ document.addEventListener('keydown', handleKeydown)
 
 <template>
     <transition name="fade-slide">
-        <div v-if="isOpen" @click="handleBackdropClick" data-dialog-backdrop="true"
-            class="fixed inset-0 z-60 flex bg-black/80 p-4 justify-center items-center">
+        <div
+            v-if="isOpen"
+            @click="handleBackdropClick"
+            data-dialog-backdrop="true"
+            class="fixed inset-0 z-60 flex bg-black/80 p-4 justify-center items-center"
+        >
             <div class="bg-muted rounded-lg shadow-lg w-full max-w-sm relative">
-                <button @click="hideDialog" type="button"
-                    class="absolute top-3 end-2.5 text-muted hover:text-zinc-800 hover:bg-zinc-300 dark:hover:bg-zinc-700 dark:hover:text-zinc-200 rounded-lg w-8 h-8 flex justify-center items-center cursor-pointer">
+                <button
+                    @click="hideDialog"
+                    type="button"
+                    class="absolute top-3 end-2.5 text-muted hover:text-zinc-800 hover:bg-zinc-300 dark:hover:bg-zinc-700 dark:hover:text-zinc-200 rounded-lg w-8 h-8 flex justify-center items-center cursor-pointer"
+                >
                     <X class="w-5 h-5" />
                 </button>
                 <div class="p-4 md:p-5 text-center">

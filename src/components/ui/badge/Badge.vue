@@ -1,5 +1,5 @@
 <script setup>
-import { getBgColor } from '@/utils';
+import { getBgColor } from '@/utils'
 import { badgeProps } from './badge.props'
 
 const props = defineProps(badgeProps)

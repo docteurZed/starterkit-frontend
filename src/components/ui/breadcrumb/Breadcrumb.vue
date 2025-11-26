@@ -1,6 +1,6 @@
 <script setup>
-import { breadcrumbProps } from './breadcrumb.props';
-import { ChevronRight, Home } from 'lucide-vue-next';
+import { breadcrumbProps } from './breadcrumb.props'
+import { ChevronRight, Home } from 'lucide-vue-next'
 
 const props = defineProps(breadcrumbProps)
 </script>
@@ -14,9 +14,7 @@ const props = defineProps(breadcrumbProps)
                         :to="item.href"
                         variant="light"
                         class="inline-flex items-center cursor-pointer text-sm font-semibold hover:text-primary-500 dark:hover:text-primary-600"
-                        :class="[
-                            props.lightColor ? 'text-zinc-200' : 'text-default',
-                        ]"
+                        :class="[props.lightColor ? 'text-zinc-200' : 'text-default']"
                     >
                         <Home class="w-3 h-3 me-2.5" />
                         {{ item.label }}
@@ -31,11 +29,7 @@ const props = defineProps(breadcrumbProps)
                             :to="item.href"
                             variant="light"
                             class="ms-1 cursor-pointer text-sm font-semibold hover:text-primary-500 dark:hover:text-primary-600 md:ms-2"
-                            :class="[
-                                props.lightColor
-                                    ? 'text-zinc-200'
-                                    : 'text-default',
-                            ]"
+                            :class="[props.lightColor ? 'text-zinc-200' : 'text-default']"
                         >
                             {{ item.label }}
                         </RouterLink>
@@ -43,11 +37,7 @@ const props = defineProps(breadcrumbProps)
                             v-else
                             aria-current="page"
                             class="ms-1 text-sm font-medium md:ms-2"
-                            :class="[
-                                props.lightColor
-                                    ? 'text-zinc-400'
-                                    : 'text-muted',
-                            ]"
+                            :class="[props.lightColor ? 'text-zinc-400' : 'text-muted']"
                         >
                             {{ item.label }}
                         </span>

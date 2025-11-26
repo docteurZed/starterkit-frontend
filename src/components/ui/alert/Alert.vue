@@ -38,17 +38,11 @@ const focusClasses = getFocusColor(props.variant)
     >
         <div
             v-if="isVisible"
-            :class="[
-                'p-4 border-l-4 bg-muted rounded-lg shadow-sm mb-4',
-                borderClasses,
-            ]"
+            :class="['p-4 border-l-4 bg-muted rounded-lg shadow-sm mb-4', borderClasses]"
             role="alert"
         >
             <div class="flex items-center">
-                <component
-                    :is="iconComponent"
-                    :class="['shrink-0 w-5 h-5', textClasses]"
-                />
+                <component :is="iconComponent" :class="['shrink-0 w-5 h-5', textClasses]" />
 
                 <div :class="['ms-3 font-medium', textClasses]">
                     <slot name="title">Titre de l'alerte</slot>

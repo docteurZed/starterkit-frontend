@@ -2,7 +2,6 @@
 import { PublicWrapper, Section } from '@/modules/public'
 </script>
 
-
 <template>
     <PublicWrapper>
         <Section></Section>

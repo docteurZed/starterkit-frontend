@@ -68,8 +68,12 @@ const paginatedRows = computed(() => {
 
             <DataTableEmpty v-if="filteredRows.length === 0" message="Pas de résultats trouvés" />
 
-            <DataTablePagination :total-rows="filteredRows.length" v-model="currentPage" v-model:perPage="perPage"
-                :per-page-options="perPageOptions" />
+            <DataTablePagination
+                :total-rows="filteredRows.length"
+                v-model="currentPage"
+                v-model:perPage="perPage"
+                :per-page-options="perPageOptions"
+            />
         </div>
     </Card>
 </template>

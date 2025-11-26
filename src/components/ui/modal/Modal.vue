@@ -38,17 +38,9 @@ onUnmounted(() => {
             v-if="isOpen"
             @click="handleBackdropClick"
             data-modal-backdrop="true"
-            :class="[
-                'fixed inset-0 z-50 flex bg-black/80 p-4 overflow-y-auto',
-                placementClasses,
-            ]"
+            :class="['fixed inset-0 z-50 flex bg-black/80 p-4 overflow-y-auto', placementClasses]"
         >
-            <div
-                :class="[
-                    'bg-muted rounded-lg shadow-lg w-full relative',
-                    sizeClasses,
-                ]"
-            >
+            <div :class="['bg-muted rounded-lg shadow-lg w-full relative', sizeClasses]">
                 <!-- Header -->
                 <div
                     class="flex items-center p-4 border-b border-zinc-300 dark:border-zinc-700border-default rounded-t"

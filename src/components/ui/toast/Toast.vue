@@ -30,16 +30,11 @@ const placementClasses = {
                 :key="t.id"
                 class="flex items-center w-full max-w-xs p-4 mb-3 border-l-4 rounded-lg shadow bg-zinc-200 dark:bg-zinc-800"
                 :class="{
-                    'border-info text-info':
-                        t.variant === 'info',
-                    'border-success text-success':
-                        t.variant === 'success',
-                    'border-warning text-warning':
-                        t.variant === 'warning',
-                    'border-error text-error':
-                        t.variant === 'error',
-                    'border-strong text-muted':
-                        t.variant === 'neutral',
+                    'border-info text-info': t.variant === 'info',
+                    'border-success text-success': t.variant === 'success',
+                    'border-warning text-warning': t.variant === 'warning',
+                    'border-error text-error': t.variant === 'error',
+                    'border-strong text-muted': t.variant === 'neutral',
                 }"
             >
                 <component :is="icons[t.variant]" class="w-5 h-5 shrink-0" />

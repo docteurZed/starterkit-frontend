@@ -37,16 +37,31 @@ watch(
         </div>
 
         <div class="relative">
-            <input :id="id" :type="typeInput" :name="name" :placeholder="placeholder" :required="required"
-                v-model="localValue" :class="[
+            <input
+                :id="id"
+                :type="typeInput"
+                :name="name"
+                :placeholder="placeholder"
+                :required="required"
+                v-model="localValue"
+                :class="[
                     'bg-zinc-200/50 text-default text-sm rounded-lg block w-full p-2.5 pr-10 dark:bg-zinc-800/50 placeholder-zinc-500 dark:placeholder-zinc-600 border',
                     borderClasses,
-                ]" />
+                ]"
+            />
 
-            <button v-if="showToggle" type="button" @click="showPassword = !showPassword"
-                class="absolute inset-y-0 right-2.5 flex items-center text-muted hover:text-zinc-800 dark:hover:text-zinc-200">
+            <button
+                v-if="showToggle"
+                type="button"
+                @click="showPassword = !showPassword"
+                class="absolute inset-y-0 right-2.5 flex items-center text-muted hover:text-zinc-800 dark:hover:text-zinc-200"
+            >
                 <transition name="fade" mode="out-in">
-                    <component :key="showPassword" :is="showPassword ? EyeOff : Eye" class="w-5 h-5" />
+                    <component
+                        :key="showPassword"
+                        :is="showPassword ? EyeOff : Eye"
+                        class="w-5 h-5"
+                    />
                 </transition>
             </button>
         </div>
