@@ -1,0 +1,6 @@
+export { default as FileInput } from './file-input/FileInput.vue'
+export { default as ImageDropzone } from './image-dropzone/ImageDropzone.vue'
+export { default as PasswordInput } from './password-input/PasswordInput.vue'
+export { default as SearchInput } from './search-input/SearchInput.vue'
+export { default as Textarea } from './textarea/Textarea.vue'
+export { default as TextInput } from './text-input/TextInput.vue'

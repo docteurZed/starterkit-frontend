@@ -1,0 +1,238 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-primary-50: #fff4eb;
+    --color-primary-100: #ffe1cb;
+    --color-primary-200: #ffc090;
+    --color-primary-300: #ff9b57;
+    --color-primary-400: #f5761f;
+    --color-primary-500: #af4900; /* Couleur principale */
+    --color-primary-600: #8d3a00;
+    --color-primary-700: #6c2d00;
+    --color-primary-800: #4b1f00;
+    --color-primary-900: #2b1100;
+
+    --color-secondary-50: #ebf8f7;
+    --color-secondary-100: #c8ebe8;
+    --color-secondary-200: #9edbd7;
+    --color-secondary-300: #6ac4be;
+    --color-secondary-400: #3ba69f;
+    --color-secondary-500: #1e7068;
+    --color-secondary-600: #185b54;
+    --color-secondary-700: #124743;
+    --color-secondary-800: #0c312f;
+    --color-secondary-900: #071e1d;
+
+    --color-tertiary-50: #fff5ec;
+    --color-tertiary-100: #ffe6cf;
+    --color-tertiary-200: #ffc899;
+    --color-tertiary-300: #ffa35f;
+    --color-tertiary-400: #ff7f26;
+    --color-tertiary-500: #e15e00; /* Couleur principale tertiaire */
+    --color-tertiary-600: #b74b00;
+    --color-tertiary-700: #8e3a00;
+    --color-tertiary-800: #652900;
+    --color-tertiary-900: #3d1800;
+
+    --color-info-50: #eff6ff;
+    --color-info-100: #dbeafe;
+    --color-info-200: #bfdbfe;
+    --color-info-300: #93c5fd;
+    --color-info-400: #60a5fa;
+    --color-info-500: #3b82f6;
+    --color-info-600: #2563eb;
+    --color-info-700: #1d4ed8;
+    --color-info-800: #1e40af;
+    --color-info-900: #1e3a8a;
+
+    --color-success-50: #ecfdf3;
+    --color-success-100: #d1f7d9;
+    --color-success-200: #a6ecb0;
+    --color-success-300: #73dc82;
+    --color-success-400: #3fc753;
+    --color-success-500: #015b16;
+    --color-success-600: #014912;
+    --color-success-700: #01370d;
+    --color-success-800: #002409;
+    --color-success-900: #001204;
+
+    --color-error-50: #fff1f1;
+    --color-error-100: #ffd7d7;
+    --color-error-200: #ffb3b3;
+    --color-error-300: #ff8a8a;
+    --color-error-400: #ff5c5c;
+    --color-error-500: #9f0001;
+    --color-error-600: #7e0000;
+    --color-error-700: #5f0000;
+    --color-error-800: #3f0000;
+    --color-error-900: #200000;
+
+    --color-warning-50: #fffbeb;
+    --color-warning-100: #fef3c7;
+    --color-warning-200: #fde68a;
+    --color-warning-300: #fcd34d;
+    --color-warning-400: #fbbf24;
+    --color-warning-500: #f59e0b;
+    --color-warning-600: #d97706;
+    --color-warning-700: #b45309;
+    --color-warning-800: #92400e;
+    --color-warning-900: #78350f;
+}
+
+@layer utilities {
+    /* Text */
+    .text-default {
+        @apply text-zinc-800 dark:text-zinc-200;
+    }
+    .text-muted {
+        @apply text-zinc-600 dark:text-zinc-400;
+    }
+
+    .text-primary {
+        @apply text-primary-500 dark:text-primary-600;
+    }
+    .text-secondary {
+        @apply text-secondary-500 dark:text-secondary-600;
+    }
+    .text-tertiary {
+        @apply text-tertiary-500 dark:text-tertiary-600;
+    }
+
+    .text-error {
+        @apply text-error-500 dark:text-error-600;
+    }
+    .text-info {
+        @apply text-info-500 dark:text-info-600;
+    }
+    .text-success {
+        @apply text-success-500 dark:text-success-600;
+    }
+    .text-warning {
+        @apply text-warning-500 dark:text-warning-600;
+    }
+
+    /* Background */
+    .bg-default {
+        @apply bg-zinc-100 dark:bg-zinc-900;
+    }
+    .bg-muted {
+        @apply bg-zinc-200 dark:bg-zinc-800;
+    }
+    .bg-strong {
+        @apply bg-zinc-400 dark:bg-zinc-600;
+    }
+
+    .bg-primary {
+        @apply bg-primary-500 dark:bg-primary-600;
+    }
+    .bg-secondary {
+        @apply bg-secondary-500 dark:bg-secondary-600;
+    }
+    .bg-tertiary {
+        @apply bg-tertiary-500 dark:bg-tertiary-600;
+    }
+
+    .bg-error {
+        @apply bg-error-500 dark:bg-error-600;
+    }
+    .bg-info {
+        @apply bg-info-500 dark:bg-info-600;
+    }
+    .bg-success {
+        @apply bg-success-500 dark:bg-success-600;
+    }
+    .bg-warning {
+        @apply bg-warning-500 dark:bg-warning-600;
+    }
+
+    /* Borders */
+    .border-default {
+        @apply border-zinc-300 dark:border-zinc-700;
+    }
+    .border-muted {
+        @apply border-zinc-200 dark:border-zinc-800;
+    }
+    .border-strong {
+        @apply border-zinc-400 dark:border-zinc-600;
+    }
+
+    .border-primary {
+        @apply border-primary-500 dark:border-primary-600;
+    }
+    .border-secondary {
+        @apply border-secondary-400 dark:border-secondary-600;
+    }
+    .border-tertiary {
+        @apply border-tertiary-500 dark:border-tertiary-600;
+    }
+
+    .border-error {
+        @apply border-error-500 dark:border-error-600;
+    }
+    .border-info {
+        @apply border-info-500 dark:border-info-600;
+    }
+    .border-success {
+        @apply border-success-500 dark:border-success-600;
+    }
+    .border-warning {
+        @apply border-warning-500 dark:border-warning-600;
+    }
+
+    /* Focus rings */
+    .focus-default {
+        @apply focus:ring-zinc-400 dark:focus:ring-zinc-500;
+    }
+
+    .focus-primary {
+        @apply focus:ring-primary-400 dark:focus:ring-primary-500;
+    }
+    .focus-secondary {
+        @apply focus:ring-secondary-400 dark:focus:ring-secondary-500;
+    }
+    .focus-tertiary {
+        @apply focus:ring-tertiary-400 dark:focus:ring-tertiary-500;
+    }
+
+    .focus-error {
+        @apply focus:ring-error-400 dark:focus:ring-error-500;
+    }
+    .focus-info {
+        @apply focus:ring-info-400 dark:focus:ring-info-500;
+    }
+    .focus-success {
+        @apply focus:ring-success-400 dark:focus:ring-success-500;
+    }
+    .focus-warning {
+        @apply focus:ring-warning-400 dark:focus:ring-warning-500;
+    }
+
+    .ring-default {
+        @apply ring-zinc-400 dark:ring-zinc-500;
+    }
+
+    .ring-primary {
+        @apply ring-primary-400 dark:ring-primary-500;
+    }
+    .ring-secondary {
+        @apply ring-secondary-400 dark:ring-secondary-500;
+    }
+    .ring-tertiary {
+        @apply ring-tertiary-400 dark:ring-tertiary-500;
+    }
+
+    .ring-error {
+        @apply ring-error-400 dark:ring-error-500;
+    }
+    .ring-info {
+        @apply ring-info-400 dark:ring-info-500;
+    }
+    .ring-success {
+        @apply ring-success-400 dark:ring-success-500;
+    }
+    .ring-warning {
+        @apply ring-warning-400 dark:ring-warning-500;
+    }
+}
