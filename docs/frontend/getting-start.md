@@ -188,5 +188,3 @@ app.mount('#app')
 ```bash
 npm run dev
 ```
-
-L’application démarre sur **[http://localhost:5173/](http://localhost:5173/)**.
