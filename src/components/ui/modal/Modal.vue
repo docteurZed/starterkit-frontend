@@ -34,29 +34,17 @@ onUnmounted(() => {
 
 <template>
     <transition name="fade-slide">
-        <div
-            v-if="isOpen"
-            @click="handleBackdropClick"
-            data-modal-backdrop="true"
-            :class="['fixed inset-0 z-50 flex bg-black/80 p-4 overflow-y-auto', placementClasses]"
-        >
+        <div v-if="isOpen" @click="handleBackdropClick" data-modal-backdrop="true"
+            :class="['fixed inset-0 z-50 flex bg-black/80 p-4 overflow-y-auto', placementClasses]">
             <div :class="['bg-muted rounded-lg shadow-lg w-full relative', sizeClasses]">
                 <!-- Header -->
-                <div
-                    class="flex items-center p-4 border-b border-zinc-300 dark:border-zinc-700border-default rounded-t"
-                    :class="$slots.header ? 'justify-between' : 'justify-end'"
-                >
-                    <h3
-                        v-if="$slots.header"
-                        class="text-lg font-semibold text-zinc-800 dark:text-zinc-200"
-                    >
+                <div class="flex items-center p-4 border-b border-zinc-300 dark:border-zinc-700 border-default rounded-t"
+                    :class="$slots.header ? 'justify-between' : 'justify-end'">
+                    <h3 v-if="$slots.header" class="text-lg font-semibold text-zinc-800 dark:text-zinc-200">
                         <slot name="header" />
                     </h3>
-                    <button
-                        type="button"
-                        @click="hide"
-                        class="text-muted hover:text-zinc-800 hover:bg-zinc-300 dark:hover:bg-zinc-700 dark:hover:text-zinc-200 rounded-lg p-1.5 cursor-pointer"
-                    >
+                    <button type="button" @click="hide"
+                        class="text-muted hover:text-zinc-800 hover:bg-zinc-300 dark:hover:bg-zinc-700 dark:hover:text-zinc-200 rounded-lg p-1.5 cursor-pointer">
                         <X class="w-5 h-5" />
                     </button>
                 </div>
@@ -67,10 +55,7 @@ onUnmounted(() => {
                 </div>
 
                 <!-- Footer -->
-                <div
-                    v-if="$slots.footer"
-                    class="p-4 border-t border-default flex justify-end space-x-2"
-                >
+                <div v-if="$slots.footer" class="p-4 border-t border-default flex justify-end space-x-2">
                     <slot name="footer" />
                 </div>
             </div>
